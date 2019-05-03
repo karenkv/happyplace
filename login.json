@@ -1,0 +1,32 @@
+{
+  "username": {
+    "password": "password",
+    "school": "irvine",
+    "email": "username@example.com"
+  },
+  "user1": {
+    "password": "pass1",
+    "school": "university",
+    "email": "user0@example.com"
+  },
+  "johndoe": {
+    "password": "password",
+    "school": "irvine",
+    "email": "johndoe@example.com"
+  },
+  "janedoe": {
+    "password": "password",
+    "school": "university",
+    "email": "janedoe@example.com"
+  },
+  "karebear": {
+    "password": "321karen",
+    "school": "beckman",
+    "email": "karenkv@uci.edu"
+  },
+  "karenkv": {
+    "password": "321karen",
+    "school": "beckman",
+    "email": "karenkv@uci.edu"
+  }
+}

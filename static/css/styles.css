@@ -1,0 +1,108 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+  color: rgb(59, 59, 59);
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#login{
+  float: right;
+  padding-top: 30px;
+  padding-right: 13px;
+}
+
+p{
+  font-weight: bold;
+  padding: 0px;
+  margin:0px;
+  font-size: 18px;
+}
+
+#sign-up{
+  float: right;
+  padding-right: 30px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#chat{
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+}
+
+.chat{
+  font-size: 20px;
+  font-weight: normal;
+  max-width: fit-content;
+  height: 328px;
+  overflow: auto;
+}
+
+.twitter-timeline{
+  height:328px;
+}
+
+#contact{
+  float: right;
+  padding-right: 30px;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: inline-block;
+}
+
+#header{
+  background: rgb(255, 217, 0);
+}
+
+.submit-button{
+  margin-top:5px;
+  border-radius: 5px;
+  background-color: rgb(255, 217, 0);
+  border-color: rgb(255, 217, 0);
+  color: rgb(59, 59, 59);
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-button{
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(59, 59, 59);
+  display: inline-block;
+}
+
+.select-school{
+  display: inline-block;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title-animation{
+  display: inline-block;
+	animation: type 3.5s steps(26,end);
+	overflow:hidden;
+	white-space: nowrap;
+	border-right: 4px transparent #A9A9A9;
+}
+
+@keyframes type {
+	0% {
+		width: 0ch;
+		border-right: 4px solid #A9A9A9;
+	}
+	100% {
+		width: 26ch;
+		border-right: 4px solid #A9A9A9;
+	}
+}
+
+@media(max-width:767px) {
+  display: flex;
+  flex-wrap: wrap;
+  float: none;
+  text-justify: center;
+}

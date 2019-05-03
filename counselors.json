@@ -1,0 +1,18 @@
+{
+  "irvine":{
+    "name": "Ms. O'Connell",
+    "email": "oconnell@example.com"
+  },
+  "university":{
+    "name": "Mr. Wu",
+    "email": "wu@example.com"
+  },
+  "beckman":{
+    "name": "Mrs. Fong",
+    "email": "fong@example.com"
+  },
+  "woodbridge":{
+    "name": "Ms. campbell",
+    "email": "campbell@example.com"
+  }
+}

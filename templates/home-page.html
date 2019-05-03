@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HappyPlace</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="../static/css/styles.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <script>
+		function alertmessage(){
+      var loc = window.location;
+      var dec = decodeURI(loc);
+      dec = dec.substring(dec.indexOf("=")+1, dec.indexOf("&"));
+      var pos = dec.indexOf("=")+1;
+      var res = dec.substr(pos).split("+").join(" ");
+      return res;
+    }
+	</script>
+  <script>
+		function chatcontent(){
+      var loc = window.location;
+      var dec = decodeURI(loc);
+      dec = dec.substring(dec.lastIndexOf("=")+1);
+      var pos = dec.indexOf("=")+1;
+      var t1 = dec.substr(pos).split("+").join(" ");
+      var t2 = t1.split("%2F").join("/");
+      var t3 = t2.split("%2C").join(",");
+      var res = t3.split("%3A").join(":");
+      return res;
+    }
+	</script>
+	{% if message %}
+	<script>
+    alert(alertmessage())
+  </script>
+	{% endif %}
+
+	<div class="container-fluid">
+		<div class="row" id="header">
+			<div class="col-sm-2">
+				<span class="title-animation"><h1>happyplace.</h1></span>
+      </div>
+      <div class="col-sm-10" id="user">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="col-sm-3">
+        <a class="twitter-timeline" href="https://twitter.com/MotivationalMsg">Happy Place Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-8" id="chat">
+        <div class="row">
+          <h2>Messageboard<h2>
+          
+          <p class="chat" id="demo"></p>
+          {% if content %}
+          <script>
+            document.getElementById("demo").innerHTML = "<b>happyplace</b>: Welcome to happyplace!<br/>" + chatcontent();
+          </script>
+          {% endif %}
+        </div>
+        <br/>
+        <div class="row">
+          <form id="chatsubmit" method="POST" action="/handle-chat">
+          <textarea name="message" rows="2" cols="80">
+          </textarea>
+          <input class="submit-button" type="submit" value="submit"/>
+          </form>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <form id="contact" method="POST" action="/handle-contact">
+          <div class="row"><h2>talk to local <br/>counselor.</h2></div>
+          <div class="row"><input name="name" type="text" placeholder="name"/></div>
+          <div class="row"><input name="email" type="text" placeholder="email"/></div>
+          <div class="row"><input name="subject" type="text" placeholder="subject"/></div>
+          <div class="row"><textarea name="message" rows="15" cols="23" placeholder="message"></textarea></div>
+          <div class="row"><input class="submit-button" type="submit" value="submit" /></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

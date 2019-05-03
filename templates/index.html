@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HappyPlace</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="../static/css/styles.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+	</script>
+</head>
+
+<body>
+	{% if message %}
+	<script>
+		function myFunction(){
+      var loc = window.location;
+      var dec = decodeURI(loc);
+      var pos = dec.lastIndexOf("=")+1;
+      var res = dec.substr(pos).split("+").join(" ");
+      alert(res);
+    }
+    myFunction()
+	</script>
+	{% endif %}
+
+	<div class="container-fluid">
+		<div class="row" id="header">
+      <div class="col-sm-2">
+			 <span class="title-animation"><h1>happyplace.</h1></span>
+      </div>
+      <div class="col-sm-10">
+        <form id="login" method="POST" action="/handle-login">
+          <input name="username" type="text" placeholder="username"/>
+          <input name="password" type="password" placeholder="password"/>
+          <input class="login-button" type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <h3> lorem ipsum</h3>
+      </div>
+      <div class="col-sm-6">
+        <form id="sign-up" method="POST" action="/handle-create">
+          <div class="row"><h2>sign up</h2></div>
+          <div class="row"><input name="email" type="text" placeholder="email"/></div>
+          <div class="row"><input name="username" type="text" placeholder="username"/></div>
+          <div class="row"><input name="password" type="password" placeholder="password"/></div>
+          <div class="row" id="school"><p>school<p></div>
+          <div class="row">
+          <select name="school" class="select-school" >
+            <option value="irvine">irvine high school</option>
+            <option value="university">university high school</option>
+            <option value="beckman">beckman high school</option>
+            <option value="woodbridge">woodbridge high school</option>
+          </select></div>
+          <div class="row"><input class="submit-button" type="submit" value="submit" /></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
